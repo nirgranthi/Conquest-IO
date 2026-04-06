@@ -1,9 +1,16 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import App from "./App";
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import './index.css'
+import App from './App'
+import { GameContextProvider } from './assets/GameContext'
+import { registerSW } from 'virtual:pwa-register'
 
-ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-);
+registerSW({ immediate: true })
+
+createRoot(document.getElementById('root') as HTMLElement).render(
+  <StrictMode>
+    <GameContextProvider>
+      <App />
+    </GameContextProvider>
+  </StrictMode>,
+)
