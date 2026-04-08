@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 // Easily update this version variable to sync it across the app
-const VERSION = "1.0.0";
+const VERSION = "1.0.1";
 
 console.log(`Syncing version ${VERSION} across all config files...`);
 
