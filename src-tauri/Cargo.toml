@@ -1,8 +1,8 @@
 [package]
 name = "conquest-io"
-version = "1.0.1"
-description = "A Tauri App"
-authors = ["you"]
+version = "1.0.2"
+description = "Conquest IO: A high-stakes real-time strategy game featuring multi-base chain attacks, adaptive AI, and cross-platform support."
+authors = ["Nirgranthi"]
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
@@ -18,6 +18,7 @@ crate-type = ["staticlib", "cdylib", "rlib"]
 tauri-build = { version = "2", features = [] }
 
 [dependencies]
+tauri-plugin-vnidrop-share = "0.2.1"
 tauri = { version = "2", features = [] }
 tauri-plugin-opener = "2"
 serde = { version = "1", features = ["derive"] }
