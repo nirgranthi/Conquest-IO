@@ -1,3 +1,4 @@
+import { canShare, share } from "@vnidrop/tauri-plugin-share"
 import { useGameContext } from "./GameContext"
 import { useState, useEffect } from "react"
 
@@ -90,15 +91,18 @@ export const GameTimer = () => {
 }
 
 export const ShareButton = () => {
+    async function handleShare () {
+        const isCanShare = await canShare()
+        console.log(isCanShare)
+        if (isCanShare) {
+            await share({ title: 'CONQUEST IO', url: "https://github.com/nirgranthi/Conquest-IO/releases" })
+        }
+    }
     return (
         <button
             className="absolute top-6 right-6 text-gray-500 hover:text-white transition-colors"
             aria-label='share'
-            onClick={() => {
-                if (navigator.share) {
-                    navigator.share({ title: 'CONQUEST IO', url: window.location.href });
-                }
-            }}
+            onClick={handleShare}
         >
             <svg xmlns="http://www.w3.org/2000/svg"
                 width="20"

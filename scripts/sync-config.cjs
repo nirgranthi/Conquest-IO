@@ -2,8 +2,9 @@ const fs = require('fs');
 const path = require('path');
 
 // Easily update this version variable to sync it across the app
-const VERSION = "1.0.2";
+const VERSION = "1.0.3";
 //v1.0.2 fixed "Double click sends all troops" issue
+//v1.0.3 fix: share button
 
 console.log(`Syncing version ${VERSION} across all config files...`);
 
