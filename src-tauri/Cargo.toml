@@ -1,6 +1,6 @@
 [package]
 name = "conquest-io"
-version = "1.0.2"
+version = "1.0.3"
 description = "Conquest IO: A high-stakes real-time strategy game featuring multi-base chain attacks, adaptive AI, and cross-platform support."
 authors = ["Nirgranthi"]
 edition = "2021"
